@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordbog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 2px 1em;
+      }
+      main {
+        padding: 1em;
+      }
+      input {
+        padding: 0.5em;
+        width: 100%;
+      }
+      button {
+        padding: 0.5em;
+      }
+      #search-result {
+        margin-top: 1em;
+      }
+      .search {
+        display: flex;
+        margin-bottom: 1em;
+        width: 500px;
+        gap: 8px;
+      }
+      .stats {
+        margin-bottom: 1em;
+        font-style: italic;
+        font-family: monospace;
+        font-size: large;
+      }
+      .stats span {
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        font-style: italic;
+        margin-bottom: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        border-bottom: 1px solid #ccc;
+      }
+      ul li span {
+        font-weight: bold;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ordbog søg</h1>
+    </header>
+    <main>
+      <div class="search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Søg efter et ord..."
+        />
+        <button id="search-button">Søg</button>
+      </div>
+      <div class="stats">
+        <div>Requests to server: <span id="request-count"></span></div>
+        <div>Total time: <span id="total-time"></span></div>
+      </div>
+      <div id="search-result"></div>
+    </main>
+    <script src="./src/index.js" type="module"></script>
+  </body>
+</html>
