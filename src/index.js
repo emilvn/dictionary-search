@@ -3,7 +3,13 @@ window.addEventListener("load", main);
 
 async function main() {
   const searchButton = document.querySelector("#search-button");
+  const searchInput = document.querySelector("#search-input");
   searchButton.addEventListener("click", binarySearch);
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      binarySearch();
+    }
+  });
 }
 
 async function binarySearch() {
